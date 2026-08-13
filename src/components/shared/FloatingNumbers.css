@@ -1,0 +1,24 @@
+/* src/components/shared/FloatingNumbers.css */
+.floating-symbols-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-symbol {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.08);
+  font-family: var(--font-display);
+  font-weight: 800;
+  animation: floatAround linear infinite;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@keyframes floatAround {
+  0%   { transform: translateY(100vh) rotate(0deg); opacity: 0.04; }
+  50%  { opacity: 0.12; }
+  100% { transform: translateY(-80px) rotate(360deg); opacity: 0.04; }
+}

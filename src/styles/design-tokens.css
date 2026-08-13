@@ -1,0 +1,54 @@
+/* ════════════════════════════════════════════
+   MultiplyQuest: Multiplication Facts up to 9×9 — Design Tokens
+   ════════════════════════════════════════════ */
+
+:root {
+  /* ── Core palette ── */
+  --color-bg: #0a0a2e;
+  --color-surface: rgba(30, 30, 100, 0.7);
+  --color-primary: #ffc107;     /* gold — CTAs, active states */
+  --color-secondary: #7c5cbf;   /* purple — secondary elements */
+  --color-accent: #4caf50;      /* green — correct answers */
+  --color-error: #ef5350;       /* red — wrong answers */
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+
+  /* ── Aliases used across components ── */
+  --gold: #ffc107;
+  --purple: #7c5cbf;
+  --purple-light: #9c7fd8;
+  --green: #4caf50;
+  --red: #ef5350;
+
+  /* ── World accents (10 worlds) ── */
+  --world-1: #ff6f61;   /* Sticker Swap Market (×2) */
+  --world-2: #ab47bc;   /* Chess Club Championship (×3) */
+  --world-3: #ec407a;   /* Music Band Rehearsal (×4) */
+  --world-4: #ffa726;   /* Science Fair Showcase (×5) */
+  --world-5: #66bb6a;   /* Basketball League (×6) */
+  --world-6: #29b6f6;   /* Art Mural Project (×7) */
+  --world-7: #c0ca33;   /* Robotics Workshop (×8) */
+  --world-8: #5c6bc0;   /* Space Launch Control (×9) */
+  --world-9: #283593;   /* Grand School Fair (mixed) */
+  --world-10: #00bcd4;  /* Owl's Wisdom Tower (mastery) */
+
+  /* ── Typography ── */
+  --font-display: 'Fredoka', 'Nunito', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+
+  /* ── Radii ── */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.35);
+  --shadow-glow-gold: 0 0 24px rgba(255, 193, 7, 0.35);
+
+  /* ── Transitions ── */
+  --transition-fast: 0.18s ease;
+  --transition-base: 0.3s ease;
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

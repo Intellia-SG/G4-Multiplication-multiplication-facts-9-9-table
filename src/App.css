@@ -1,0 +1,160 @@
+/* src/App.css — App Shell, Fixed Header & Responsive Viewport Container */
+.app-shell {
+  width: 100%;
+  max-width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.phase-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  padding-top: 68px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+/* ─── Header & Navigation ────────────────────────────────────────────────── */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 72px;
+  z-index: 150;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.home-btn {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  z-index: 200;
+  pointer-events: auto;
+  background: rgba(22, 18, 48, 0.88);
+  border: 1.5px solid #f59e0b;
+  color: #fbbf24;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.92rem;
+  border-radius: var(--radius-pill);
+  padding: 7px 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: var(--transition-fast);
+  min-height: 38px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+
+.home-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #fcd34d;
+  color: #fcd34d;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.3);
+}
+
+.home-btn:active {
+  transform: translateY(0);
+}
+
+.header-progress {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  transform: translateX(-50%);
+  z-index: 160;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ─── Responsive Adjustments ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .app-header {
+    height: 52px;
+    padding: 0 8px;
+  }
+  .home-btn {
+    top: 9px;
+    left: 8px;
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    min-height: 34px;
+  }
+  .header-progress {
+    top: 9px;
+  }
+  .phase-content {
+    padding-top: 56px;
+    padding-bottom: max(130px, calc(95px + env(safe-area-inset-bottom, 36px)));
+  }
+}
+
+@media (max-width: 540px) {
+  .app-header {
+    height: 48px;
+  }
+  .home-btn {
+    top: 8px;
+    left: 6px;
+    padding: 4px 8px;
+    gap: 0;
+    min-height: 32px;
+  }
+  .home-btn .home-text {
+    display: none;
+  }
+  .header-progress {
+    top: 8px;
+  }
+  .phase-content {
+    padding-top: 52px;
+    padding-bottom: max(140px, calc(100px + env(safe-area-inset-bottom, 40px)));
+  }
+}
+
+@media (max-width: 380px) {
+  .app-header {
+    height: 46px;
+  }
+  .home-btn {
+    top: 8px;
+    left: 4px;
+    padding: 3px 6px;
+    font-size: 0.82rem;
+  }
+  .header-progress {
+    top: 8px;
+  }
+  .phase-content {
+    padding-top: 50px;
+    padding-bottom: max(145px, calc(105px + env(safe-area-inset-bottom, 40px)));
+  }
+}

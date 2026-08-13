@@ -1,0 +1,125 @@
+/* src/components/phases/WonderPhase.css */
+.wonder-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px 12px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wonder-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wonder-particle {
+  position: absolute;
+  opacity: 0.22;
+  animation: wonderFloat 6s ease-in-out infinite;
+  user-select: none;
+}
+
+.wonder-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wonder-card {
+  width: 100%;
+  padding: clamp(14px, 2.2vh, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 1.4vh, 14px);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  box-sizing: border-box;
+}
+
+.wonder-stadium-icon {
+  font-size: clamp(2rem, 3.5vh, 2.8rem);
+  line-height: 1;
+}
+
+.wonder-title {
+  color: var(--gold);
+  font-size: clamp(1.4rem, 2.8vh, 1.95rem);
+  margin: 0;
+}
+
+.wonder-number-display {
+  background: rgba(255, 193, 7, 0.12);
+  border: 2px solid rgba(255, 193, 7, 0.35);
+  border-radius: var(--radius-md);
+  padding: 6px 18px;
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.wonder-num {
+  color: var(--gold);
+  font-size: clamp(1.15rem, 2.2vh, 1.6rem);
+}
+
+.wonder-question-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wonder-q {
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-size: clamp(0.9rem, 1.5vh, 1.05rem);
+  margin: 0;
+}
+
+.wonder-em {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.wonder-highlight {
+  color: #ff9f43;
+  font-weight: 900;
+}
+
+.wonder-mascot-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.wonder-cta {
+  font-size: clamp(0.95rem, 1.6vh, 1.12rem);
+  padding: 10px 32px;
+  min-height: 44px;
+  margin-top: 2px;
+}
+
+@media (max-height: 640px) {
+  .wonder-stadium-icon { display: none; }
+  .wonder-card { padding: 10px 14px; gap: 6px; }
+  .wonder-question-card { padding: 6px 10px; }
+}

@@ -1,0 +1,400 @@
+/* src/components/simulations/Stations.css — Compact, Activity-Based Styles */
+
+.station-content-wrap {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(6px, 1.2vh, 10px);
+  padding: 8px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.station-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.station-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.station-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.2vh, 1.45rem);
+  font-weight: 800;
+  color: var(--gold);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.station-instruction {
+  font-family: var(--font-body);
+  font-size: clamp(0.92rem, 1.6vh, 1.05rem);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.station-mission-card {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1.5px solid rgba(255, 193, 7, 0.35);
+  border-radius: 12px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.mission-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(0.95rem, 1.8vh, 1.15rem);
+  color: #ffffff;
+}
+.mission-highlight {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.mission-badge {
+  background: var(--gold);
+  color: #18181b;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 3px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.mission-locked-pill {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.5vh, 0.98rem);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Controls Panel */
+.sim-controls-panel {
+  background: rgba(20, 16, 48, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.sim-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 120px;
+  flex: 1;
+}
+
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.slider-val-badge {
+  color: var(--gold);
+  background: rgba(255, 193, 7, 0.15);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.sim-range-input {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.18);
+  outline: none;
+  cursor: pointer;
+  accent-color: var(--gold);
+}
+
+/* Formula equation banner */
+.equation-banner {
+  background: rgba(15, 12, 40, 0.85);
+  border: 1.5px solid var(--gold);
+  border-radius: 12px;
+  padding: 6px 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1rem, 2vh, 1.35rem);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(251, 176, 59, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.equation-banner .highlight-num {
+  color: var(--gold);
+}
+
+/* Interactive Grid Canvas */
+.interactive-grid-canvas {
+  background: rgba(14, 11, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.4);
+}
+
+.grid-row-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.grid-row-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  width: 20px;
+  text-align: right;
+}
+
+.grid-dot {
+  width: clamp(22px, 3vh, 30px);
+  height: clamp(22px, 3vh, 30px);
+  border-radius: 6px;
+  background: radial-gradient(circle, #ffd54f 0%, #ff9f43 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.85rem, 1.8vh, 1.1rem);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.grid-dot:hover {
+  transform: scale(1.15);
+}
+
+.grid-dot.inactive {
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0.35;
+  box-shadow: none;
+}
+
+.grid-dot.split-a {
+  background: radial-gradient(circle, #60a5fa 0%, #2563eb 100%);
+}
+
+.grid-dot.split-b {
+  background: radial-gradient(circle, #f472b6 0%, #db2777 100%);
+}
+
+/* Skip-counting tags row */
+.skip-count-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  padding-left: 24px;
+}
+
+.skip-count-tag {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #cbd5e1;
+  width: clamp(22px, 3vh, 30px);
+  text-align: center;
+  padding: 1px 0;
+}
+
+/* Number Line Jump Styles */
+.number-line-container {
+  width: 100%;
+  background: rgba(14, 11, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 18px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.number-line-track {
+  width: 94%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  position: relative;
+  margin: 24px 0 8px;
+}
+
+.number-line-tick {
+  position: absolute;
+  top: -5px;
+  width: 2px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+}
+
+.number-line-label {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #a0a0b8;
+}
+
+.number-line-landing {
+  position: absolute;
+  top: -24px;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  transition: all 0.35s ease;
+  filter: drop-shadow(0 0 6px #fbb03b);
+}
+
+.qr-groups-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+}
+
+.qr-group-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.qr-group-badge {
+  font-size: 0.65rem;
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.qr-group-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
+}
+
+.qr-group-item {
+  font-size: 0.95rem;
+}
+
+/* Fact Family Triangle Interactive */
+.fact-triangle-interactive-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+  justify-content: center;
+}
+
+.triangle-equations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.eq-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.eq-pill.highlight {
+  border-color: var(--gold);
+  background: rgba(255, 193, 7, 0.15);
+  color: var(--gold);
+}
+
+.station-action-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (max-height: 600px) {
+  .station-instruction { display: none; }
+  .equation-banner { padding: 4px 10px; font-size: 0.95rem; }
+  .grid-dot { width: 20px; height: 20px; font-size: 0.75rem; }
+}

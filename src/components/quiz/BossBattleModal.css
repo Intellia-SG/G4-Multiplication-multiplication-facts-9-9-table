@@ -1,0 +1,127 @@
+/* src/components/quiz/BossBattleModal.css */
+.boss-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 240;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(8, 6, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.boss-modal-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  border-radius: var(--radius-xl);
+  box-sizing: border-box;
+}
+
+.boss-modal-card.battle-mode {
+  max-width: 680px;
+  padding: 18px 16px;
+}
+
+.boss-avatar-pulse {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.25);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+  animation: pulseGlow 2s infinite;
+}
+
+.boss-emoji {
+  font-size: 2.8rem;
+}
+
+.boss-title {
+  color: var(--gold);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.boss-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.boss-lives-preview {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.boss-reward-preview {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.boss-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.boss-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(15, 12, 40, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 8px 14px;
+  margin-bottom: 6px;
+}
+
+.boss-hud-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.boss-hud-emoji {
+  font-size: 1.4rem;
+}
+
+.boss-hud-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--gold);
+  font-size: 0.92rem;
+}
+
+.boss-hud-lives {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.boss-hud-progress {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
